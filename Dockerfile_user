@@ -6,3 +6,7 @@ MAINTAINER <christoph.hahn@uni-graz.at>
 ADD to_add/platanus to_add/platanus_internal_trim to_add/platanus_trim /usr/bin/
 RUN chmod a+x /usr/bin/platanus*
 
+#add user (not really necessary)
+RUN adduser --disabled-password --gecos '' platanuser
+USER platanuser
+
